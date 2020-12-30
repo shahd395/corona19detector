@@ -201,4 +201,7 @@ def runJob():
     if (q37 == 13):
         print('desiased')
         result= 'desiased'
+    elif (q1 == 1):
+        print('recovred')
+        result = 'recovred'
     return result
