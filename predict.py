@@ -199,7 +199,7 @@ def runJob():
 
     result = ''
     if form.getvalue('q1'):
-        q1_value = form.getvalue('q1')
+        q1_value = form.getvalue('1')
     else:
         q1 = "recovred"
         result= 'recovred'
