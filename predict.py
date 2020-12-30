@@ -198,10 +198,11 @@ def runJob():
     #print('---------------------------------------------------------------')
 
     result = ''
-    if (q37 == 13):
-        print('desiased')
-        result= 'desiased'
-    elif (q1 == 1):
-        print('recovred')
-        result = 'recovred'
+    if form.getvalue('q1'):
+        q1_value = form.getvalue('q1')
+    else:
+        q1 = "recovred"
+        result= 'recovred'
+
     return result
+
