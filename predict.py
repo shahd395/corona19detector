@@ -198,13 +198,11 @@ def runJob(req_data):
     #print('---------------------------------------------------------------')
 
     result = ''
-    if {"q1" : '1' }:
-        print('معافى')
-        result = 'معافى'
-    if {"q1" :'2'}:
-        print('شهد')
-        result = 'شهد'
-    
+    if isinstance(q1, 1):
+        result ='recovred'
+    else:
+        if isinstance(q1, 1):
+            result ='exposed'
     return result
 
 
