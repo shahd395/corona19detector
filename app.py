@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "hello world"
+    return "hello, world"
 
 
 @app.route('/predict', methods=['POST'])
