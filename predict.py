@@ -18,11 +18,11 @@ import cgi, cgitb # Import modules for CGI handling
 
 def predict(req_data):
     print(req_data)
-    result = runJob()
+    result = runJob(req_data)
     return result
 
 
-def runJob():
+def runJob(req_data):
     df= pd.read_csv('two.csv')
     # Importing and cleaning the data
      # Create instance of FieldStorage 
@@ -198,10 +198,13 @@ def runJob():
     #print('---------------------------------------------------------------')
 
     result = ''
-    if form.getvalue('q1'):
-        q1_value = form.getvalue('1')
-    else:
-        result = 'نتيجة الفحص: مصاب         ويترتب على ذلك :            1. إجراء الفحص المخبري للتأكد من الإصابة بنسبة أكبر         2. القيام بالعزل المنزلي، وفي حال شعرت بأي تعب يحتاج لتدخل طبي اتصل بالجهات المعنية كالطب الوقائي           3. المحافظة على تناول المكملات الغذائية والفيتاميان إما على شكل أدوية بوصفة طبية، وإما عن طريق الخضار كالفلفل الحلو الغني بفيتامين د، والفواكه الحمضية'
-
+    if {"q1" : '1' }:
+        print('معافى')
+        result = 'معافى'
+    if {"q1" :'2'}:
+        print('شهد')
+        result = 'شهد'
+    
     return result
+
 
