@@ -5,9 +5,9 @@ from flask_cors import CORS,cross_origin
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET'])
-def index():
-    return "hello"
+@app.route('/')
+def index()
+    return "hello world"
 
 
 @app.route('/predict', methods=['POST'])
